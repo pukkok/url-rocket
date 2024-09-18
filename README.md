@@ -1,8 +1,8 @@
 # url-rocket🚀
 
-### 용도 : url을 이용하여 간단한 메모 전달하기
+### 용도 : url을 이용하여 간단한 픽셀 전달하기
 
-### [메모 발사하기](https://pukkok.github.io/url-rocket)
+### [픽셀 발사하기](https://pukkok.github.io/url-rocket)
 
 ## 고쳐진 길
 1. 좌표를 전부다 url로 넘기기엔 url이 길어져서 사용이 불가능했다.

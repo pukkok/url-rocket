@@ -1,3 +1,4 @@
+const section = document.querySelector('section')
 const paintBtn = document.getElementById('paint')
 const removeBtn = document.getElementById('remove')
 const copyBtn = document.getElementById('copy')
@@ -5,6 +6,15 @@ const resetBtn = document.getElementById('reset')
 const pixelBox = document.getElementById('pixel')
 
 const myColor = 'rgb(30, 30, 46)' // #1E1E2E
+const pixelSize = () => {
+    const size = Math.min(window.innerHeight, window.innerWidth)
+    pixelBox.style.width = size - 40 + 'px'
+    pixelBox.style.height = size - 40 + 'px'
+}
+pixelSize()
+window.addEventListener('resize', () => {
+    pixelSize()
+})
 
 // 400개의 픽셀 생성 (20줄 * 20픽셀)
 Array(400).fill(0).forEach((_, index) => {

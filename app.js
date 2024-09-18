@@ -12,18 +12,26 @@ Array(400).fill(0).forEach((_, index) => {
     span.dataset.index = index // 픽셀의 인덱스를 저장
     pixelBox.append(span)
 })
-
 let isPaintMode = true
-paintBtn.addEventListener('click', () => {
+
+function paintMode() {
     isPaintMode = true
     paintBtn.classList.add('active')
     removeBtn.classList.remove('active')
-})
-removeBtn.addEventListener('click', () => {
+}
+
+function removeMode () {
     isPaintMode = false
     removeBtn.classList.add('active')
     paintBtn.classList.remove('active')
+}
+// 단축키 모드
+window.addEventListener('keyup', (e) => {
+    e.key === '1' && paintMode()
+    e.key === '2' && removeMode()
 })
+paintBtn.addEventListener('click', paintMode)
+removeBtn.addEventListener('click', removeMode)
 
 let isDown = false
 const pixels = document.querySelectorAll('span')

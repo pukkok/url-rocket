@@ -63,7 +63,7 @@ section button.active, section button:active{
 }
 
 section #pixel{
-    background-color: #EDEDED;
+    background-color: #B0B0B0;
     width: 600px;
     height: 600px;
     z-index: -1;
@@ -71,7 +71,8 @@ section #pixel{
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
+    gap: 1px;
 }
 #pixel span{
-    border: solid 1px #B0B0B0;
+    background-color: #fff;
 }

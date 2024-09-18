@@ -57,7 +57,7 @@ section .tools button{
     font-weight: bold;
     cursor: pointer;
 }
-section button.active, section button:active{
+section button.active{
     background-color: #7E37ED;
     color: #EDEDED;
 }

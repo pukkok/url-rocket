@@ -14,8 +14,16 @@ Array(400).fill(0).forEach((_, index) => {
 })
 
 let isPaintMode = true
-paintBtn.addEventListener('click', () => isPaintMode = true)
-removeBtn.addEventListener('click', () => isPaintMode = false)
+paintBtn.addEventListener('click', () => {
+    isPaintMode = true
+    paintBtn.classList.add('active')
+    removeBtn.classList.remove('active')
+})
+removeBtn.addEventListener('click', () => {
+    isPaintMode = false
+    removeBtn.classList.add('active')
+    paintBtn.classList.remove('active')
+})
 
 let isDown = false
 const pixels = document.querySelectorAll('span')
